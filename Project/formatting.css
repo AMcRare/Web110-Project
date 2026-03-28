@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/** 
+	===================
+	Formatting CSS File
+	===================
+**/
+
+/** 
+	===================
+	Colors & Typography
+  ===================
+**/
+:root {
+	--kaitoke-green: #003D20;
+	--bay-leaf: #71AA8E;
+	--conch: #CED6D2;
+	--gin: #E6F1EB;
+	--red-oxide: #6B0504;
+	--jewel: #12633C;
+	--mineral-green: #385145;
+	--viola: #C98CA7;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: url("fonts/Raleway-variableFont_wght.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Raleway-Italic";
+	src: url("fonts/Raleway-Italic-variableFont_wght.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Playfair";
+	src: url("fonts/PlayfairDisplay-variableFont_wght.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Playfair-Italic";
+	src: url("fonts/PlayfairDisplay-Italic-variableFont_wght.ttf") format("truetype");
+}
+
+
+/**
+	==================
+	HTML & Body Styles
+  ==================
+**/
+
+/** Intro to CSS - Format Background and Text **/
+html {
+	background: var(--gin);
+	font-family: "Raleway", Verdana, Geneva, sans-serif;
+	color: var(--kaitoke-green);
+	font-size: 12px;
+}
+
+h1, h2, h3 {
+	font-family: "Playfair", serif;
+	color: var(--kaitoke-green);
+}
+
+
+/**
+	==========================
+	Header & Navigation Styles
+  ==========================
+**/
+
+nav {
+	list-style-type: none;
+	background: var(--kaitoke-green);
+	color: var(--gin);
+	font-family: "Playfair", serif;
+	font-size: 1.5em;
+	line-height: 2em;
+	align-self: center;
+}
+
+/** Intro to CSS - Use Attribute Selectors **/
+a#navicon {
+	width: 2em;
+	height: 2em;
+	color: var(--gin);
+}
+
+/** Intro to CSS - Use Contextual Selectors **/
+a#navicon svg {
+	margin: 0.3em;
+}
+
+/** Intro to CSS - Format Lists **/
+nav li {
+  color: var(--gin);
+	line-height: 2em;
+  text-align: center;
+}
+
+nav a {
+	font-size: 1em;
+	text-decoration: none;
+}
+
+/** Intro to CSS - Psuedo-classes for Links **/
+nav a:visited, nav a:link {
+  color: var(--conch);
+}
+
+nav a:hover, nav a:active {
+  color: var(--viola);
+}
+
+/**
+	===================
+	Main Content Styles
+  ===================
+**/
+
+.banner h1{
+	font-size: 2.5em;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+.bio h1 {
+	font-size: 2.5em;
+	line-height: 1.5em;
+}
+
+.bio .slideshow img {
+	border-radius: 2em;
+	box-shadow: 10px 10px 1em var(--conch);
+}
+
+.work-header h1 {
+	font-size: 2.5em;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+.project {
+	box-shadow: 10px 10px 1em var(--conch);
+	border-radius: 1em;
+}
+
+.project img {
+	border-radius: 1em 1em 0px 0px;
+}
+
+.content {
+	color: var(--kaitoke-green);
+	font-family: "Raleway", Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	text-align: left;
+}
+
+.content h2 {
+	font-size: 1.5em;
+}
+
+.content li {
+	list-style-type: none;
+}
+
+.job-title, .degree {
+	font-weight: 700;
+}
+
+.location {
+	font-family: "Raleway-Italic", Verdana, Geneva, sans-serif;
+}
+
+.employment-dates, .progress {
+	font-weight: 500;
+}
+
+.heading {
+	font-weight: 700;
+	list-style-type: none;
+}
+
+/** Intro to CSS - Use Pseudo-elements **/
+.skill-category li::before {
+	content: " ▸ ";
+	color: var(--bay-leaf);	
+}
+
+
+/**
+	=============
+	Footer Styles
+  =============
+**/
+
+footer {
+	list-style-type: none;
+	background: var(--gin);
+	color: var(--kaitoke-green);
+	font-family: "Playfair", serif;
+	font-size: 0.75em;
+	line-height: 1em;
+	box-shadow: 0px -2px 1em var(--conch);
+}
+
+footer li {
+  color: var(--kaitoke-green);
+	line-height: 2em;
+  text-align: center;
+}
+
+/** Intro to CSS - Psuedo-classes for Links **/
+footer a:visited, footer a:link {
+  color: var(--bay-leaf);
+}
+
+footer a:hover, footer a:active {
+  color: var(--viola);
+}
+
+
+
+
+
