@@ -1,52 +1,83 @@
-<!--Intro to HTML - Set metadata-->
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-<!--Intro to HTML - Link to CSS files-->
+
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="formatting.css">
 		<link rel="stylesheet" href="responsive.css">
 	</head>
 
   <body>
-		<header>
-<!--Intro to HTML - Navigation with hyperlinks-->
+    <header>
 			<nav class="horizontal">	<a id="navicon" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5 17H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
 				<ul>
 					<li><a href="home.html">Home</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="work.html">Work</a></li>
-					<li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
 
-		<main class="bio">
-<!--Intro to HTML - Use inline images-->
-			<div class="slideshow">
-				<img src="images/Headshot_1.jpg" alt="Headshot of Angela McCrary-Roffis">
-<!--		<img src="images/Headshot_2.jpg" alt="Headshot of Angela McCrary-Roffis">
-				<img src="images/Headshot_3.jpg" alt="Headshot of Angela McCrary-Roffis">
-				<img src="images/Headshot_4.jpg" alt="Headshot of Angela McCrary-Roffis">
-				<img src="images/Headshot_5.jpg" alt="Headshot of Angela McCrary-Roffis">  -->
-			</div>
+    <main>
+      <div class="contact-header">
+        <h1>Let's Work Together!</h1>
+        <p>Whether you have a project in mind or just want to talk possibilities, I would love to hear from you!</p>
+        <p>Please fill out the form below and I will get back to you as soon as possible.</p>
+      </div>
 
-			<div class="about">
-				<h1>Hello World!</h1>
-				<p>I&apos;m a Freelance Designer and Developer and I work with local startups and creatives to flesh out the ideas they&apos;ve been ruminating on.</p>
-				<p>After many years in Customer Service and Hospitality, I know that the smallest detail can determine the entire outcome of an interaction, and focusing on the human element is vital for success. </p>
-				<p>I have a BFA in Film and Television from the Savannah College of Art and Design, and would love to work as part of a tight-knit team where I can use the abilities I&apos;ve gained from my varied background.</p>
-				<p>I hold multiple certifications in user experience design and have a strong foundation in both design thinking and prototyping.</p>
-				<p>Over the years, I taught myself the basics of HTML, CSS, and JavaScript through a combination of online videos, Myspace, and Tumblr. This journey hinged on what I consider my most important secret ability, Google. Someone out there knows what I need to know, and it&apos;s available to be found. </p>
-				<p>I have also begun working on an associates degree in Information Technology, to expand my coding knowledge and add Python to it.</p>
-				<p>I believe bookshelves should be organized alphabetically, because as aesthetically pleasing as color based organization is, it&apos;s too hard to find the book you want later. I also love food. My aim is to perfect the ultimate brownie recipe and it&apos;s my belief that Shepherd&apos;s Pie is God-Tier. </p>
-			</div>
-		</main>
+      <form id="contact" action="#" method="post">
+        <fieldset id="contactInfo">
+          <legend>Contact Information</legend>
+          <div class="formRow">
+            <label for="name">First &amp; Last Name:</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required><span></span>
+          </div>
 
-		<footer>
+          <div class="formRow">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Jane.Doe@example.com" required><span></span>
+          </div>
+
+          <div class="formRow">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555"><span></span>
+          </div>
+        </fieldset>
+
+
+        <fieldset id="projectInfo">
+          <legend>Project Information</legend>
+          <div class="formRow">
+            <label for="project">Project Type:</label>
+            <select id="project" name="project" placeholder="Please select a project type" required>
+              <option value="" disabled selected>Please select a project type</option>
+              <option value="Branding">Branding</option>
+              <option value="UXUIDesign">Experience or Interface Design</option>
+              <option value="Development">Coding &amp; Development</option>
+              <option value="All">Full-Service</option>
+            </select><span></span>
+          </div>
+
+          <div class="formRow">
+            <label for="message">Tell me more:
+            <textarea id="message" name="message" rows="5" placeholder="Please give me any additional details about what you're looking for and where you're starting from..." required></textarea>
+            </label>
+          </div>
+        </fieldset>
+
+        <div id="buttons">
+          <button type="submit">Send</button>
+          <button type="reset">Clear</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
 			<div>
 				<p>&copy; 2026 McRoffis Design</p>
 			</div>
@@ -61,5 +92,5 @@
 				</ul>
 			</div>
 		</footer>
+
   </body>
-</html>

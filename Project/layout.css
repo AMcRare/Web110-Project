@@ -198,6 +198,71 @@ li.heading {
 }
 
 /** 
+	===========
+	Form Layout
+  ===========
+**/
+
+div.contact-header {
+	display: block;
+}
+
+div.contact-header p {
+	margin: 0.25em 0;
+}
+
+form#contact {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+form#contact > fieldset {
+  flex: 1 1 300px;
+  padding: 1.5em;
+  margin: 1em;
+}
+
+legend {
+  padding: 0.5em;
+}
+
+div.formRow {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0.75em 0;
+}
+
+div.formRow > * {
+  flex: 1 1 150px;
+}
+
+label {
+	margin: 0.5em 0;
+}
+
+select {
+	width: 95%;
+}
+
+textarea {
+  height: 100px;
+	width: 100%;
+	margin: 0.5em 0;
+}
+
+div#buttons {
+  width: 100%;
+}
+
+button {
+	min-width: 5em;
+	padding: 1em 2em;
+	margin: 2em 1em;
+}
+
+
+
+/** 
 	=============
 	Footer Layout
   =============

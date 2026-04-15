@@ -184,6 +184,100 @@ nav a:hover, nav a:active {
 	color: var(--bay-leaf);	
 }
 
+/** 
+	===========
+	Form Styles
+  ===========
+**/
+
+.contact-header {
+	text-align: center;
+}
+
+.contact-header h1 {
+	font-size: 2.5em;
+	line-height: 1.5em;
+}
+
+
+fieldset {
+	border-radius: 20px;
+	font-size: 1em;
+	border: var(--mineral-green) 1px solid;
+	box-shadow: 0px 2px 1em var(--conch);
+}
+
+legend {
+	font-size: 1.2em;
+	font-weight: 500;
+}
+
+input, select, textarea {
+	background: var(--gin);
+	color: var(--kaitoke-green);
+	font-family: "Raleway", Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	padding: 0.5em;
+	border-radius: 10px;
+	border: var(--mineral-green) 1px solid;
+}
+
+input::placeholder, textarea::placeholder {
+	color: var(--mineral-green);
+	opacity: .75;
+	font-family: "Raleway-Italic", Verdana, Geneva, sans-serif;
+	font-size: 1em;
+}
+
+input:hover, select:hover, textarea:hover {
+  background-color: var(--conch);
+	border: var(--viola) 1px solid;
+}
+
+input:focus, select:focus, textarea:focus {
+  background-color: var(--conch);
+	border: var(--viola) 1px solid;
+}
+
+/** FIGURE THIS OUT LATER
+input:invalid + span::before {
+  content: img url("images/input_invalid.png");
+  border-color: var(--red-oxide);
+}
+
+input:valid + span::before {
+  content: img url("images/input_valid.png");
+  border-color: var(--jewel);
+}
+**/
+
+div#buttons {
+  text-align: center;
+}
+
+button {
+	background: var(--kaitoke-green);
+	color: var(--gin);
+	font-family: "raleway", Verdana, Geneva, sans-serif;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	font-weight: 500;
+	border-radius: 10px;
+	border: none;
+}
+
+button:hover {
+	background: var(--viola);
+	color: var(--gin);
+box-shadow: 0px 2px 1em var(--conch);
+}
+
+input[type="submit"], input[type="reset"] {
+  font-size: 1.2em;
+}
+
+
+
 
 /**
 	=============
