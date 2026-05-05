@@ -197,6 +197,35 @@ li.heading {
 	display: block;
 }
 
+/**
+	========================
+	Countdown Timer Layout
+	========================
+**/
+
+div#countdown {
+  width: 100%;
+	padding: 0 15%;
+	display: flex;
+	justify-content: space-around;
+  flex-flow: row nowrap;
+}
+
+div#countdown > div {
+	display: block;
+	padding: 0.5em;
+	margin: 0.25em;
+}
+
+div#countdown > div > div {
+	display: block;
+}
+
+div#countdown > div > div span {
+	display: block;
+}
+
+
 /** 
 	===========
 	Form Layout
@@ -248,6 +277,12 @@ textarea {
   height: 100px;
 	width: 100%;
 	margin: 0.5em 0;
+}
+
+span.tickLabel {
+	display: inline-block;
+	width: 20%;
+	justify-content: space-around;
 }
 
 div#buttons {

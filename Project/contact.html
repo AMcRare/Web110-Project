@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="formatting.css">
 		<link rel="stylesheet" href="responsive.css">
+    <script src="script.js"></script>
 	</head>
 
   <body>
@@ -30,22 +31,58 @@
         <p>Please fill out the form below and I will get back to you as soon as possible.</p>
       </div>
 
+      <div class="contact-header">
+        <h3>You will have 2 minutes to complete this form.</h3>
+      </div>
+
+
+<!-- Countdown Timer -->
+<div id="countdown">
+  <div>
+    <div><span id="mins">02</span></div>
+    <div>Minutes</div>
+  </div>
+  <div>
+    <div><span id="secs">00</span></div> 
+    <div>Seconds</div>
+  </div>
+  <div>
+    <div><span id="ms">0000</span></div>
+    <div>Milliseconds</div>
+  </div>
+</div>
+
+
+<!--Web Forms - Create and format a form with multiple field sets-->
       <form id="contact" action="#" method="post">
         <fieldset id="contactInfo">
           <legend>Contact Information</legend>
           <div class="formRow">
-            <label for="name">First &amp; Last Name:</label>
+<!--Web Forms - Include the following input types: text-->
+            <label for="name">First &amp; Last Name: <span class="indicator">*</span></label>
             <input type="text" id="name" name="name" placeholder="Jane Doe" required><span></span>
           </div>
 
           <div class="formRow">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Jane.Doe@example.com" required><span></span>
+<!--Web Forms - Validate data by having certain fields required-->
+            <label for="email">Email: <span class="indicator">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Jane.Doe@example.com" inputmode="email" required><span></span>
           </div>
 
           <div class="formRow">
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555"><span></span>
+<!--Web Forms - Include at least one input that is set for a mobile keyboard type (e.g. number, email, url, etc.)-->
+            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" inputmode="tel"><span></span>
+          </div>
+
+          <div class="formRow">
+<!--Web Forms - Include the following input types: spinners-->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Your Age" min="18" max="120" inputmode="numeric"><span></span>
+          </div>
+
+          <div class="fineprint">
+            <p><span class="indicator">*</span> - Indicates Required Field</p>
           </div>
         </fieldset>
 
@@ -53,7 +90,8 @@
         <fieldset id="projectInfo">
           <legend>Project Information</legend>
           <div class="formRow">
-            <label for="project">Project Type:</label>
+<!--Web Forms - Create a selection list-->
+            <label for="project">Project Type: <span class="indicator">*</span></label>
             <select id="project" name="project" placeholder="Please select a project type" required>
               <option value="" disabled selected>Please select a project type</option>
               <option value="Branding">Branding</option>
@@ -64,12 +102,69 @@
           </div>
 
           <div class="formRow">
-            <label for="message">Tell me more:
+<!--Web Forms - Include the following input types: date/time-->
+            <label for="deadline">Deadline:</label>
+            <input type="datetime-local" id="deadline" name="deadline"><span></span>
+          </div>
+
+          <div class="formRow">
+<!--Web Forms - Include the following input types: range sliders-->
+            <label for="budget">Budget:</label>
+            <input type="range" id="budget" name="budget" min="0" max="1000" step="any" value="10" list="tickmarks"><span></span>
+<!--Web Forms - Include a datalist and use it for input-->
+              <datalist id="tickmarks">
+                <option value="0" label="$0"></option>
+                <option value="250" label="$250"></option>
+                <option value="500" label="$500"></option>
+                <option value="750" label="$750"></option>
+                <option value="1000" label="$1K"></option>
+              </datalist>
+            <div>
+              <span class="tickLabel">$0</span><span class="tickLabel">$250</span><span class="tickLabel">$500</span><span class="tickLabel">$750</span><span class="tickLabel">$1K+</span>
+            </div>
+            </div>
+
+          <div class="formRow">
+<!--Web Forms - Create and format a text area-->
+            <label for="message">Tell me more: <span class="indicator">*</span>
             <textarea id="message" name="message" rows="5" placeholder="Please give me any additional details about what you're looking for and where you're starting from..." required></textarea>
             </label>
           </div>
         </fieldset>
+        
+        <fieldset id="socialMedia">
+          <legend>Social Media</legend>
+          <div class="formRow">
+<!--Web Forms - Include the following input types: radio buttons-->
+            <div>
+              <label for="following">Are you following me on social media?</label>
+            </div>
+            <div>
+              <input type="radio" id="following-yes" name="following" value="yes">
+              <label for="following-yes">Yes</label>
+              <input type="radio" id="following-no" name="following" value="no">
+              <label for="following-no">No</label>
+            </div>
+          </div>
+          <div class="formRow">
+<!--Web Forms - Include the following input types: checkboxes-->
+            <div>
+              <label for="following">If so, which platform(s)?</label>
+            </div>
+            <div>
+              <input type="checkbox" id="linkedin" name="platform" value="LinkedIn">
+              <label for="linkedin">LinkedIn</label>
+              <input type="checkbox" id="github" name="platform" value="GitHub">
+              <label for="github">GitHub</label>
+              <input type="checkbox" id="behance" name="platform" value="Behance">
+              <label for="behance">Behance</label>
+              <input type="checkbox" id="other" name="platform" value="Other">
+              <label for="other">Other</label>
+            </div>
+          </div>
+        </fieldset>
 
+<!--Web Forms - Create a submit and cancel/reset button-->
         <div id="buttons">
           <button type="submit">Send</button>
           <button type="reset">Clear</button>
@@ -77,9 +172,12 @@
       </form>
     </main>
 
-    <footer>
+		<footer>
 			<div>
-				<p>&copy; 2026 McRoffis Design</p>
+				<div>
+					<p>&copy; 2026 McRoffis Design</p>
+				</div>
+				<div id="dateNow">05/05/2026 10:43:00 a.m.</div>
 			</div>
 			<div>
 				<img src="images/AMcCrary-Roffis_Logo.png" alt="Logo for Angela McCrary-Roffis">
