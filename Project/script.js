@@ -1,10 +1,5 @@
 "use strict";
 
-
-/** Javascript - Send an alert using JavaScript **/
-
-
-
 /** Javascript - Delay one command or run a command at a specified interval **/
 setInterval("runClock()", 1000);
 
@@ -53,6 +48,7 @@ function runClock() {
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const email = document.getElementById("email").value;
 if (emailRegex.test(email)) {
+/** Javascript - Send an alert using JavaScript **/
   alert("Valid email address");
 } else {
   alert("Invalid email address");
